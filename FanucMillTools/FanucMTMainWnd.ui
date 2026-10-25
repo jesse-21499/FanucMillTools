@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FanucMTMainWndClass</class>
+ <widget class="QMainWindow" name="FanucMTMainWndClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1578</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FanucMTMainWnd</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="CNCIP_tb">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>70</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(150,150, 25);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CNCIP_lbl">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>48</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CNC IP:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Connect_btn">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CONNECT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Disconnect_btn">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DISCONNECT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FocasHndl_lbl">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Focas Handle:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="FocasHndl_tb">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>10</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(70,165, 165);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="InfoLabel_lbl">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>10</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CncInfo_lbl">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>10</y>
+      <width>537</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1578</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFanuc">
+    <property name="title">
+     <string>Fanuc</string>
+    </property>
+    <widget class="QMenu" name="menuAxis_Spindle">
+     <property name="title">
+      <string>Axis Spindle</string>
+     </property>
+     <addaction name="actionGet_Machine_Position"/>
+    </widget>
+    <widget class="QMenu" name="menuNC_Program">
+     <property name="title">
+      <string>NC Program</string>
+     </property>
+     <addaction name="actionDownload_NC"/>
+     <addaction name="actionDownload_DNC"/>
+     <addaction name="actionUpload_NC"/>
+     <addaction name="actionUpload_DNC"/>
+     <addaction name="actionVerify_NC"/>
+    </widget>
+    <widget class="QMenu" name="menuNC_Data">
+     <property name="title">
+      <string>NC Data</string>
+     </property>
+     <addaction name="actionGet_Set_Parameters"/>
+     <addaction name="actionTool_Offsets"/>
+     <addaction name="actionWork_Zero_Offsets"/>
+    </widget>
+    <addaction name="menuAxis_Spindle"/>
+    <addaction name="menuNC_Program"/>
+    <addaction name="menuNC_Data"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionFanuc_NC_Settings"/>
+   </widget>
+   <addaction name="menuFanuc"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionGet_Machine_Position">
+   <property name="text">
+    <string>Get Machine Position</string>
+   </property>
+  </action>
+  <action name="actionDownload_NC">
+   <property name="text">
+    <string>Download NC</string>
+   </property>
+  </action>
+  <action name="actionDownload_DNC">
+   <property name="text">
+    <string>Download DNC</string>
+   </property>
+  </action>
+  <action name="actionUpload_NC">
+   <property name="text">
+    <string>Upload NC</string>
+   </property>
+  </action>
+  <action name="actionUpload_DNC">
+   <property name="text">
+    <string>Upload DNC</string>
+   </property>
+  </action>
+  <action name="actionVerify_NC">
+   <property name="text">
+    <string>Verify NC</string>
+   </property>
+  </action>
+  <action name="actionGet_Set_Parameters">
+   <property name="text">
+    <string>Get Set Parameters</string>
+   </property>
+  </action>
+  <action name="actionTool_Offsets">
+   <property name="text">
+    <string>Tool Offsets</string>
+   </property>
+  </action>
+  <action name="actionWork_Zero_Offsets">
+   <property name="text">
+    <string>Work Zero Offsets</string>
+   </property>
+  </action>
+  <action name="actionFanuc_NC_Settings">
+   <property name="text">
+    <string>Fanuc NC &amp;Settings</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="FanucMTMainWnd.qrc"/>
+ </resources>
+ <connections/>
+</ui>
